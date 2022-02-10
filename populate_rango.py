@@ -50,7 +50,8 @@ def populate():
             likes = cat_data['likes']
 
             c = add_cat(cat,views,likes)
-            # add_page(c, p['title'], p['url'])
+            print(p[0]['url'])
+            add_page(c, p[0]['title'], p[0]['url'])
 
     # Print out the categories we have added.
     for c in Category.objects.all():
@@ -69,7 +70,7 @@ def add_cat(name,views,likes):
     c.views = views
     c.likes = likes
     c.save()
-    return 
+    return c
 #Start execution here!
 if __name__ == '__main__':
     print('Starting Rango population script...')
