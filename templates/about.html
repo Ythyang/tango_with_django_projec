@@ -1,4 +1,4 @@
-{% load static %} <!-- New line -->
+{% load static  %} <!-- New line -->
 <html>
 <head>
 <title>Rango</title>
@@ -7,15 +7,15 @@
 <h1>element,keep Rango says...</h1>
 <div>
 here is the about page.<br />
-This tutorial has been put together by Tianhao Yang.<br />
+This tutorial has been put together by .<br />
 </div>
 <div>
 <a href="/">index</a><br />
 <img src="{% static 'rango.jpg' %}"
 alt="Picture of Rango" /> <!-- New line -->
 
-<img src="{% static 'cat.jpg' %}"
-alt="Picture of Cat" /> <!-- New line -->
+<img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat."/>.
+
 </div>
 </body>
 </html>
